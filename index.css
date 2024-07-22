@@ -1,0 +1,232 @@
+body {
+    background-color: #1F2937;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+}
+
+#headingTxt {
+    margin-left: 10%;
+    margin-top: 20%;
+    display: grid;
+}
+
+#ht1 {
+    color: white;
+}
+
+#ht2 {
+    color: #4ADF86;
+}
+
+#quote {
+    font-size: 1rem;
+    font-weight: 100;
+    color: #D5D4D8;
+}
+
+#btn-El {
+    background-color: #10B981;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn-El:hover {
+    background-color: #0D9B71;
+}
+
+#btn-El:focus {
+    outline: none;
+}
+
+hr {
+    height: 1px;
+    width: 90%;
+    border: none;
+    background-color: #2F3E53;
+    margin: 2rem auto;
+}
+
+#pass-1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem; /* Adjust the gap between items as needed */
+}
+
+#pass-El1, #pass-El2 {
+    background-color:#273549 ;
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 100;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    display: inline-flex; /* Allow the button to shrink and grow based on content */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+#pass-El1:focus, #pass-El2:focus {
+    outline: none;
+    background-color:  #273549;
+}
+
+#pass-El1:hover, #pass-El2:hover {
+    background-color: #1C2530;
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    #headingTxt {
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+
+    #btn-div {
+        margin: 1rem 5%;
+    }
+
+    #btn-El {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    #pass-El1, #pass-El2 {
+        font-size: 1rem;
+        padding: 0.5rem;
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #headingTxt {
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+
+    #btn-div {
+        margin: 1rem 5%;
+    }
+
+    #btn-El {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
+
+    #pass-El1, #pass-El2 {
+        font-size: 0.875rem;
+        padding: 0.8rem;
+        width: auto;
+    }
+}
+
+/* Dropdown Styling */
+.dropbtn {
+    background-color: #1F2937;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.dropbtn i {
+    margin-right: 8px;
+    
+}
+
+.dropbtn:hover {
+    background-color: #1F2937;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.dropdown-content label {
+    color: black;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content label:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-content input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.notification {
+    visibility: hidden;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+.notification.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; } 
+    to { opacity: 1; }
+}
+
+@keyframes fadein {
+    from { opacity: 0; } 
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeout {
+    from { opacity: 1; } 
+    to { opacity: 0; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; } 
+    to { opacity: 0; }
+}
