@@ -171,51 +171,98 @@ hr {
     border-radius: 6px;
 }
 
-.dropbtn i {
-    margin-right: 8px;
+/* Dropdown button styling */
+.dropbtn {
+    background-color: #1F2937;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .dropbtn:hover {
     background-color: #1F2937;
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
+.dropbtn i {
+    margin-right: 8px;
+}
+
+/* Dropdown container styling */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
+/* Dropdown content styling */
 .dropdown-content {
     display: none;
     position: absolute;
     right: 0;
-    background-color: #f9f9f9;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: white;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    border-radius: 6px;
-    overflow: hidden;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: left;
+    animation: fadeIn 0.3s ease;
 }
 
+/* Animation for dropdown content */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Styling for dropdown labels */
 .dropdown-content label {
-    color: black;
-    padding: 12px 16px;
+    color: #333;
+    padding: 10px 15px;
     display: flex;
     align-items: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border-radius: 4px;
 }
 
 .dropdown-content label:hover {
-    background-color: #f1f1f1;
+    background-color: #f0f0f0;
 }
 
+/* Styling for dropdown checkboxes */
 .dropdown-content input[type="checkbox"] {
     margin-right: 10px;
 }
 
+/* Styling for the close button */
+.dropdown-content button {
+    display: block;
+    margin: 15px auto 0;
+    padding: 10px 20px;
+    background-color: #10B981;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content button:hover {
+    background-color: #0D9B71;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Display the dropdown content on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 
 .notification {
     visibility: hidden;
@@ -236,6 +283,8 @@ hr {
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
+
+
 @-webkit-keyframes fadein {
     from { opacity: 0; } 
     to { opacity: 1; }
@@ -254,4 +303,12 @@ hr {
 @keyframes fadeout {
     from { opacity: 1; } 
     to { opacity: 0; }
+}
+
+#quantity{
+    margin-left: 1rem;
+}
+#customLength
+{
+    margin-left: 0.9rem;
 }

@@ -41,8 +41,19 @@ function passwordbtn() {
         charset = charset.filter(char => !capitalChar.includes(char));
     }
     
-    const password1 = generatePassword(15, charset);
-    const password2 = generatePassword(15, charset);
+    let customLength= getCustomLength();
+
+    if(customLength==="" || customLength == 0)
+    {
+        customLength=15
+    }
+    else
+    {
+
+    }
+
+    const password1 = generatePassword(customLength, charset);
+    const password2 = generatePassword(customLength, charset);
     
     document.getElementById("pass-El1").innerText = password1;
     document.getElementById("pass-El2").innerText = password2;
@@ -75,3 +86,40 @@ function showNotification(message) {
         notification.className = notification.className.replace("show", "hide");
     }, 3000); // Notification disappears after 3 seconds
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const dropbtn = document.querySelector('.dropbtn');
+    const doneBtn = document.getElementById('doneBtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    if (!dropbtn || !doneBtn || !dropdownContent) {
+        console.error('One or more elements are missing.');
+        return;
+    }
+
+    // Show the dropdown when clicking the dropbtn
+    dropbtn.addEventListener('click', function() {
+        dropdownContent.style.display = 'block';
+    });
+
+    // Hide the dropdown when clicking the donebtn
+    doneBtn.addEventListener('click', function() {
+        dropdownContent.style.display = 'none';
+    });
+});
+
+
+function getCustomLength()
+{
+    const quantityInput = document.getElementById('quantity');
+    const length = quantityInput.value;
+    console.log('Custom Length:', length);
+
+    return length;
+}
+
+document.getElementById('doneBtn').addEventListener('click', function() {
+    getCustomLength();
+});
+
