@@ -39,6 +39,8 @@ h1 {
     padding: 0.5rem 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    touch-action: manipulation; /* Added */
+
 }
 
 #btn-El:hover {
@@ -62,6 +64,7 @@ hr {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem; /* Adjust the gap between items as needed */
+    
 }
 
 #pass-El1, #pass-El2 {
@@ -77,6 +80,8 @@ hr {
     transition: background-color 0.3s ease;
     display: inline-flex; /* Allow the button to shrink and grow based on content */
     white-space: nowrap; /* Prevent text from wrapping */
+    touch-action: manipulation; /* Added */
+
 }
 
 #pass-El1:focus, #pass-El2:focus {
