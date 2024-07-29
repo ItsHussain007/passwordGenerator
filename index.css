@@ -154,6 +154,10 @@ hr {
     .dropbtn i {
         font-size: 1rem;
     }
+    .dropdown-content label{
+        font-size:1rem;
+        
+    }
 }
 
 /* Dropdown Styling */
