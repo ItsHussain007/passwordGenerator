@@ -88,49 +88,66 @@ hr {
     background-color: #1C2530;
 }
 
-
 /* Media Queries for Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     #headingTxt {
         margin-left: 5%;
-        margin-top: 10%;
+        margin-top: 40%;
+        font-size: 2rem;
     }
 
     #btn-div {
         margin: 1rem 5%;
     }
 
+    #quote {
+        font-size: 1.5rem;
+    }
+
     #btn-El {
-        font-size: 1rem;
+        font-size: 1.5rem;
         padding: 0.5rem;
     }
 
     #pass-El1, #pass-El2 {
-        font-size: 1rem;
+        font-size: 1.5rem;
         padding: 0.5rem;
         width: auto;
+    }
+
+    .dropbtn i {
+        font-size: 1.5rem;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 430px) {
     #headingTxt {
         margin-left: 5%;
-        margin-top: 5%;
+        margin-top: 20%;
+        font-size: 1.5rem;
     }
 
     #btn-div {
         margin: 1rem 5%;
     }
 
+    #quote {
+        font-size: 1rem;
+    }
+
     #btn-El {
-        font-size: 0.875rem;
+        font-size: 1rem;
         padding: 0.5rem;
     }
 
     #pass-El1, #pass-El2 {
-        font-size: 0.875rem;
+        font-size: 1rem;
         padding: 0.8rem;
         width: auto;
+    }
+
+    .dropbtn i {
+        font-size: 1rem;
     }
 }
 
@@ -147,7 +164,6 @@ hr {
 
 .dropbtn i {
     margin-right: 8px;
-    
 }
 
 .dropbtn:hover {
