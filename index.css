@@ -12,22 +12,27 @@ h1 {
 
 #headingTxt {
     margin-left: 10%;
-    margin-top: 20%;
+    margin-top: 10%;
     display: grid;
 }
 
 #ht1 {
     color: white;
+    font-size:6rem;
+
 }
 
 #ht2 {
     color: #4ADF86;
+    font-size:3.5rem;
+
 }
 
 #quote {
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 100;
     color: #D5D4D8;
+
 }
 
 #btn-El {
@@ -259,9 +264,9 @@ hr {
 }
 
 /* Display the dropdown content on hover */
-.dropdown:hover .dropdown-content {
+/* .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
 
 
 .notification {
@@ -312,3 +317,5 @@ hr {
 {
     margin-left: 0.9rem;
 }
+
+
