@@ -5,6 +5,15 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+/* CSS to hide elements */
+.hidden {
+    display: none;
+}
+
+/* CSS to show elements (you can use this if needed, but block is default) */
+.visible {
+    display: block;
+}
 
 h1 {
     margin: 0;
@@ -97,6 +106,8 @@ hr {
 #pass-El1:hover, #pass-El2:hover {
     background-color: #1C2530;
 }
+
+
 
 /* Media Queries for Responsive Design */
 @media (max-width: 1000px) {
@@ -286,6 +297,51 @@ hr {
     visibility: visible;
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Flexbox container to align the text and input horizontally */
+.input-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    gap: 10px; /* Adjust the space between the text and the input */
+    margin-top: 10px; /* Add some space above the input if needed */
+}
+
+/* Style for the input field */
+#userName {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    border: 2px solid #10B981;
+    border-radius: 6px;
+    outline: none;
+    width: 300px; /* Control the width of the input field */
+    transition: border-color 0.3s ease;
+}
+
+#userName:hover {
+    border-color: #0D9B71;
+}
+
+#userName:focus {
+    border-color: #4ADF86;
+}
+
+#btn-container {
+    position: absolute;
+    bottom: 20px;  /* Distance from the bottom of the page */
+    right: 20px;   /* Distance from the right side of the page */
+    width: auto;   /* Auto width to keep the button’s size */
+}
+
+#next-btn {
+    padding: 10px 20px;      /* Adjust padding to make it look better */
+    background-color: #10B981; /* Button background color */
+    color: white;            /* Button text color */
+    border: none;            /* Remove default border */
+    border-radius: 6px;      /* Rounded corners */
+    font-size: 1.25rem;      /* Font size */
+    cursor: pointer;         /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 

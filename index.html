@@ -8,31 +8,60 @@
     <script src="https://kit.fontawesome.com/87d38d9165.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="notification" class="notification"></div>
-    <div id="headingTxt">
-        <h1 id="ht1">Generate a </h1>
-        <h1 id="ht2">random Password</h1>
-        <p id="quote">Never use an insecure password again.</p>
-        <div id="btn-div">
-            <button id="btn-El" onclick="passwordbtn()">Generate passwords</button>
-            <div class="dropdown">
-                <button class="dropbtn"><i class="fa-solid fa-filter"></i></button>
-                <div class="dropdown-content">
-                    <label><input type="checkbox" value="noNumbers" onchange="updateFilters()"> No Numbers</label>
-                    <label><input type="checkbox" value="noSpecialChar" onchange="updateFilters()"> No Special Characters</label>
-                    <label><input type="checkbox" value="noCapitalChar" onchange="updateFilters()"> No Capital Characters</label>
-                    <label id="customLength">Custom Length<input type="number" id="quantity" name="quantity" min="1" max="20"></label>
-                    
-                    <button id="doneBtn">Done</button>
+    <div id="password-Generator" class="hidden">
+        <div id="notification" class="notification"></div>
+        <div id="headingTxt">
+            <h1 id="ht1">Generate a </h1>
+            <h1 id="ht2">random Password</h1>
+            <p id="quote">Never use an insecure password again.</p>
+            <div id="btn-div">
+                <button id="btn-El" onclick="passwordbtn()">Generate passwords</button>
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-filter"></i></button>
+                    <div class="dropdown-content">
+                        <label><input type="checkbox" value="noNumbers" onchange="updateFilters()"> No Numbers</label>
+                        <label><input type="checkbox" value="noSpecialChar" onchange="updateFilters()"> No Special Characters</label>
+                        <label><input type="checkbox" value="noCapitalChar" onchange="updateFilters()"> No Capital Characters</label>
+                        <label id="customLength">Custom Length<input type="number" id="quantity" name="quantity" min="1" max="20"></label>
+                        
+                        <button id="doneBtn">Done</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <hr>
+        <hr>
     <div id="pass-1">
         <button id="pass-El1" onclick="copyToClipboard(this.innerText)">>nfJjy!dDvR&ial</button>
         <button id="pass-El2" onclick="copyToClipboard(this.innerText)">xWij@veiPUwKada</button>
     </div>
+    </div>
+
+    <div id="welcomePage" class="visible">
+        <!-- Welcome Page Content -->
+        <div id="headingTxt">
+            <h1 id="ht1">Hello Mate</h1>
+            <h1 id="ht2">Who Am I? My name is Gideon</h1>
+            <div class="input-container">
+                <p id="quote">What Should I call You?</p>
+                <input type="text" id="userName" placeholder="Enter your name">
+            </div>
+        </div>
+        <div id="btn-container">
+            <button onclick="goToKeywordsPage()" id="next-btn">Next</button>
+        </div>
+    </div>
+
+
+    <div id="keywordsPage" class="hidden">
+        <h1>Great, <span id="userNameDisplay"></span>! Now enter your keywords:</h1>
+        <input type="text" id="keywordsInput" placeholder="Enter keywords" />
+        <button onclick="goToPasswordPage()">Next</button>
+    </div>
+    
+    
+        
+    
+    
     <script src="index.js"></script>
 </body>
 </html>

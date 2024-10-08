@@ -123,3 +123,33 @@ document.getElementById('doneBtn').addEventListener('click', function() {
     getCustomLength();
 });
 
+function goToKeywordsPage() {
+    const name = document.getElementById('userName').value;
+    
+    if (name) {
+        // Hide the welcome page and show the keywords page
+        document.getElementById('welcomePage').classList.remove('visible');
+        document.getElementById('welcomePage').classList.add('hidden');
+        document.getElementById('keywordsPage').classList.remove('hidden');
+        
+        // Display the user's name in the next step
+        document.getElementById('userNameDisplay').innerText = name;
+    } else {
+        alert('Please enter your name');
+    }
+}
+
+function goToPasswordPage() {
+    const keywords = document.getElementById('keywordsInput').value;
+    if (keywords) {
+        // Switch between sections
+        document.getElementById('keywordsPage').classList.add('hidden');
+        document.getElementById('password-Generator').classList.remove('hidden');
+        
+        // Display the user's name in the final step
+        const name = document.getElementById('userName').value;
+        document.getElementById('userNameDisplayFinal').innerText = name;
+    } else {
+        alert('Please enter your keywords');
+    }
+}
